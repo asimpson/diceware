@@ -32,7 +32,7 @@ const genWords = length =>
   new Promise((resolve, reject) => {
     getWordList().then(list => {
       const phrase = new Array(length).fill(null).map(() => genWord());
-      resolve(phrase.map(x => list[x]).join(' '));
+      resolve(phrase.map(x => list[x]).join('-'));
     });
   });
 
